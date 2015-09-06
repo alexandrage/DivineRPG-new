@@ -24,7 +24,7 @@ public class ItemModRanged extends ItemMod {
         super(name, DivineRPGTabs.ranged);
         this.clazz = clazz;
         setMaxStackSize(1);
-        setMaxDurability(maxDamage);
+        setMaxDamage(maxDamage);
         this.sound = sound;
     }
     
@@ -50,7 +50,7 @@ public class ItemModRanged extends ItemMod {
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean par4) {
         addAdditionalInformation(stack, player, list, par4);
-        if(getMaxDurability() == -1) list.add(Util.GREEN + "Infinite Uses");
+        if(getMaxDamage() == -1) list.add(Util.GREEN + "Infinite Uses");
     }
     
     protected void addAdditionalInformation(ItemStack stack, EntityPlayer player, List list, boolean par4) { }

@@ -32,8 +32,8 @@ public class BlockVetheaPortal extends BlockBreakable {
     public BlockVetheaPortal() {
         super(Reference.PREFIX + "vetheaPortal", Material.portal, false);
     	String name = "vetheaPortal";
-        setUnlocalizedName(name);
-        setTextureName(Reference.PREFIX + name);
+    	setBlockName(name);
+    	setBlockTextureName(Reference.PREFIX + name);
         if(Reference.DEBUG) setCreativeTab(DivineRPGTabs.blocks);
         else setCreativeTab(null);
         setTickRandomly(true);

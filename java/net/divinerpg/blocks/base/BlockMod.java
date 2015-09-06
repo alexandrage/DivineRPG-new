@@ -67,7 +67,7 @@ public class BlockMod extends Block{
         setStepSound(blockType.getSound());
         setCreativeTab(tab);
         setTextureName(textureName);
-        setUnlocalizedName(name);
+        setBlockName(name);
         if(!(this instanceof IDivineMetaBlock)){
         	GameRegistry.registerBlock(this, name);
         }else{
@@ -85,7 +85,7 @@ public class BlockMod extends Block{
         setStepSound(blockType.getSound());
         setCreativeTab(tab);
         setTextureName(textureName);
-        setUnlocalizedName(name);
+        setBlockName(name);
         setHardness(hardness);
         if(hardness == -1F) {
         	setBlockUnbreakable();
@@ -108,7 +108,7 @@ public class BlockMod extends Block{
         setStepSound(blockType.getSound());
         setCreativeTab(tab);
         setTextureName(textureName);
-        setUnlocalizedName(name);
+        setBlockName(name);
         setHardness(hardness);
         if(hardness == -1F) {
         	setBlockUnbreakable();

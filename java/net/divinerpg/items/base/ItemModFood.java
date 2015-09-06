@@ -36,8 +36,8 @@ public class ItemModFood extends ItemFood {
     }
     
     @Override
-    public ItemStack onItemUseFinish(ItemStack item, World world, EntityPlayer player) {
-    	super.onItemUseFinish(item, world, player);
+    public ItemStack onEaten(ItemStack item, World world, EntityPlayer player) {
+    	super.onEaten(item, world, player);
     	if(item.getItem() == ItemsFood.chickenDinner)
     		player.triggerAchievement(DivineRPGAchievements.mealToRemember);
     	return item;
@@ -45,8 +45,8 @@ public class ItemModFood extends ItemFood {
 
     @Override
     public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean par4) {
-        list.add("Fills " + (double) getHealAmount(stack) / 2 + " Hunger Bars");
-        list.add(getSaturationModifier(stack) + " Saturation");
+        list.add("Fills " + (double) func_150905_g(stack) / 2 + " Hunger Bars");
+        list.add(func_150905_g(stack) + " Saturation");
         list.add(!isWolfsFavoriteMeat() ? Util.BLUE + "Pet Food:" + EnumChatFormatting.RESET + " false" : Util.BLUE + "Pet Food:" + EnumChatFormatting.RESET + " true");
     }
 

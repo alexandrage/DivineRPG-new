@@ -46,9 +46,9 @@ public class GUIOverlay {
 		GL11.glDisable(GL11.GL_BLEND);
 		
 		if(Minecraft.getMinecraft().gameSettings.showDebugInfo) {
-			Minecraft.getMinecraft().fontRendererObj.drawStringWithShadow(EnumChatFormatting.DARK_BLUE + text, 2, res.getScaledHeight()-10, 4210752);
+			Minecraft.getMinecraft().fontRenderer.drawStringWithShadow(EnumChatFormatting.DARK_BLUE + text, 2, res.getScaledHeight()-10, 4210752);
 		} else if(!Minecraft.getMinecraft().gameSettings.showDebugInfo) {
-			Minecraft.getMinecraft().fontRendererObj.drawStringWithShadow(text2, 2, 2, 4210752);
+			Minecraft.getMinecraft().fontRenderer.drawStringWithShadow(text2, 2, 2, 4210752);
 		}
 	}
 	
