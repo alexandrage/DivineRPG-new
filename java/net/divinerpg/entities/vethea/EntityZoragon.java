@@ -11,8 +11,8 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
 public class EntityZoragon extends EntityDivineRPGMob {
-	
-	private static final double spawnLayer = 4;
+    
+    private static final double spawnLayer = 4;
     private ChunkCoordinates currentFlightTarget;
     private int flyTimer;
     private int special;
@@ -101,7 +101,8 @@ public class EntityZoragon extends EntityDivineRPGMob {
                 if (special == 0) {
                     special = 120;
                     EntityZoragonBomb bomb = new EntityZoragonBomb(this.worldObj, this.posX, this.posY - 1, this.posZ);
-                    bomb.setVelocity(0, -0.1, 0);
+                    ///fix cauldron crash
+                    //bomb.setVelocity(0, -0.1, 0);
                     this.worldObj.spawnEntityInWorld(bomb);
                 } else {
                     special--;
@@ -118,8 +119,8 @@ public class EntityZoragon extends EntityDivineRPGMob {
         this.dropItem(VetheaItems.shinyPearls, 1);
     }
 
-	@Override
-	public String mobName() {
-		return "Zoragon";
-	}
+    @Override
+    public String mobName() {
+        return "Zoragon";
+    }
 }
